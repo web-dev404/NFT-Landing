@@ -1,0 +1,148 @@
+.auctions__img {
+	position: relative;
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	div {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(125.33deg, #8613A5 18.61%, rgba(250, 250, 250, 0.65) 137.4%);
+		opacity: 0.95;
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.12);
+		backdrop-filter: blur(45px);
+		/* Note: backdrop-filter has minimal browser support */
+
+		border-radius: 0px;
+		padding: 15px 45px;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 35px;
+		/* or 148% */
+
+		letter-spacing: 0.02em;
+	}
+}
+
+.auctions {
+	overflow: hidden;
+	padding-bottom: 80px;
+}
+
+.auctions__item {
+	background: #3D2942;
+	padding: 32px;
+}
+
+.auctions-profile__guy {
+	display: flex;
+	align-items: center;
+
+	img {
+		display: block;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 16px;
+	}
+}
+
+.auctions-profile__owner {
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 35px;
+	/* or 127% */
+
+
+	color: #F5FBF2;
+}
+
+.auctions-profile__nick {
+	font-size: 20px;
+	line-height: 35px;
+	/* or 177% */
+
+	display: flex;
+	align-items: center;
+
+	color: #BDAAC1;
+}
+
+.auctions-profile__likes {
+	display: flex;
+	align-items: center;
+
+	img {
+		width: 25px;
+		transform: scale(4);
+	}
+
+	span {
+		font-size: 32px;
+		line-height: 35px;
+		/* identical to box height, or 111% */
+
+
+		color: #76607A;
+	}
+}
+
+.auctions-bid__title {
+	font-size: 24px;
+	line-height: 35px;
+	/* identical to box height, or 148% */
+
+
+	color: #C6BFC8;
+}
+
+.auctions-bid__price {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 35px;
+	font-family: 'Oxanium';
+}
+
+.auctions__profile {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 28px 0;
+}
+
+.auctions__bid {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.auctions__btn {
+	display: block;
+	background: rgba(233, 215, 167, 0.1);
+	border: 1px solid #FDE8B3;
+	padding: 21px 0;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	width: 100%;
+	margin-top: 40px;
+	/* identical to box height, or 148% */
+
+	letter-spacing: 0.05em;
+}
+
+.auctions__view-all {
+	margin: 84px auto 0;
+	padding: 24px 64px;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 35px;
+	/* identical to box height, or 118% */
+
+	letter-spacing: 0.05em;
+	border: 1px solid #FFCE4E;
+	display: block;
+}

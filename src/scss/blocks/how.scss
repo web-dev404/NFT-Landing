@@ -1,0 +1,72 @@
+.how__title {
+	font-family: 'Oxanium';
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 130px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.how {
+	padding-top: 185px;
+}
+
+.how__icon {
+	background: #372839;
+	border-radius: 50%;
+	width: 106px;
+	height: 106px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 32px;
+	position: relative;
+
+	img {
+		transform: scale(2.5);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: -50%;
+		transform: translateY(-50%) translateX(100%);
+		background: url('../img/how-elem.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 165px;
+		height: 10px;
+	}
+}
+
+.how-item__title {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 28px;
+	text-transform: capitalize;
+
+	/* Primary color */
+
+	color: #FFCE4E;
+}
+
+.how__items {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.how__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&:last-child {
+		.how__icon {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
