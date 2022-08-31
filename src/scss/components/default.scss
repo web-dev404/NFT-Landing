@@ -41,7 +41,6 @@ button {
     top: 50%;
     left: 0;
     transform: translateY(-50%) translateX(-40%);
-    background: $purple;
     width: 110px;
     height: 110px;
     border-radius: 50%;
@@ -51,6 +50,18 @@ button {
     text-align: center;
     position: relative;
     z-index: 2;
+  }
+
+  &--purple {
+    &:after {
+      background: $purple;
+    }
+  }
+
+  &--red {
+    &:after {
+      background: $red;
+    }
   }
 }
 
