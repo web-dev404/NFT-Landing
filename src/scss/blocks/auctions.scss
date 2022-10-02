@@ -135,6 +135,12 @@
 	/* identical to box height, or 148% */
 
 	letter-spacing: 0.05em;
+
+	transition: all .2s;
+
+	&:hover {
+		background: darken(rgba(233, 215, 167, 0.1), 60);
+	}
 }
 
 .auctions__view-all {
@@ -148,4 +154,10 @@
 	letter-spacing: 0.05em;
 	border: 1px solid #FFCE4E;
 	display: block;
+
+	transition: all .3s;
+
+	&:hover {
+	background: #FFCE4E;	
+	}
 }

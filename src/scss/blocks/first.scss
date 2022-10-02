@@ -46,6 +46,12 @@
 	background: $yellow;
 
 	color: #000000;
+	transition: all .3s;
+
+	&:hover {
+		color: $yellow;
+		background: #000;
+	}
 }
 
 .first__btn2 {
@@ -53,6 +59,14 @@
 	/* Primary color */
 
 	border: 1px solid #FFCE4E;
+
+	transition: all .2s;
+
+	&:hover {
+		-webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+		-moz-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+		box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
+	}
 }
 
 .first__numbers {
@@ -159,6 +173,12 @@
 	line-height: 28px;
 	color: #000000;
 
+	transition: all .3s;
+
+	&:hover {
+		color: $yellow;
+		background: #000;
+	}
 }
 
 .first__item {
@@ -179,4 +199,10 @@
 	width: 156px;
 	height: 156px;
 	z-index: 10;
+
+	transition: all .3s;
+
+	&:hover {
+		background: darken(rgba(109, 91, 114, 0.4), 20);
+	}
 }
