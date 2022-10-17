@@ -5,6 +5,10 @@
 	line-height: 130px;
 	margin-bottom: 25px;
 	text-align: center;
+
+	@media(max-width: 600px) {
+		font-size: 30px;
+	}
 }
 
 .how {
@@ -23,7 +27,7 @@
 	position: relative;
 
 	img {
-		transform: scale(2.5);
+		max-width: 60%;
 	}
 
 	&:after {
@@ -34,9 +38,25 @@
 		transform: translateY(-50%) translateX(100%);
 		background: url('../img/how-elem.svg');
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: contain;
 		width: 165px;
 		height: 10px;
+	}
+
+	@media(max-width: 1200px) {
+		&:after {
+			width: 100px;
+			right: -30%;
+		}
+	}
+
+	@media(max-width: 500px) {
+		&:after {
+			top: 100%;
+			transform: translateX(-100%) translateY(100%) rotate(90deg);
+			height: 80px;
+			width: 80px;
+		}
 	}
 }
 
@@ -49,12 +69,26 @@
 	/* Primary color */
 
 	color: #FFCE4E;
+
+	@media(max-width: 700px) {
+		font-size: 18px;
+	}
 }
 
 .how__items {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@media(max-width: 1000px) {
+		flex-wrap: wrap;
+		grid-gap: 50px 0;
+	}
+
+	@media(max-width: 500px) {
+		flex-direction: column;
+		grid-gap: 128px 0;
+	}
 }
 
 .how__item {
@@ -66,6 +100,28 @@
 		.how__icon {
 			&:after {
 				display: none;
+			}
+		}
+	}
+
+	@media(max-width: 1000px) {
+		flex-basis: 49%;
+
+		&:nth-child(2) {
+			.how__icon {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media(max-width: 500px) {
+		&:nth-child(2) {
+			.how__icon {
+				&:after {
+					display: block;
+				}
 			}
 		}
 	}

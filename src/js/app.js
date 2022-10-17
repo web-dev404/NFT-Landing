@@ -15,47 +15,103 @@ import AOS from 'aos';
 
 flsFunctions.isWebp();
 
-const swiper = new Swiper('.auctions-slider', {
-	navigation: {
-		nextEl: '.swiper-button-next1',
-		prevEl: '.swiper-button-prev1' // Включить стрелочки
-	},
-	modules: [Navigation, FreeMode], // Модули которые будут использоваться
-	autoHeight: true, // Автовысота
-	speed: 500, // Скорость прокрутки слайдера
-	slidesPerView: 3, // Количество слайдов которые будут видны,
-	spaceBetween: 42,
-	freeMode: true,
-	grabCursor: true
-});
+const swiper = () => {
+	new Swiper('.auctions-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next1',
+			prevEl: '.swiper-button-prev1' // Включить стрелочки
+		},
+		modules: [Navigation, FreeMode], // Модули которые будут использоваться
+		autoHeight: true, // Автовысота
+		speed: 500, // Скорость прокрутки слайдера
+		slidesPerView: 3, // Количество слайдов которые будут видны,
+		spaceBetween: 15,
+		freeMode: true,
+		grabCursor: true,
+		breakpoints: {
+			1300: {
+				spaceBetween: 42
+			},
+			1100: {
+				slidesPerView: 3
+			},
+			600: {
+				slidesPerView: 2
+			}
+		}
+	});
+}
 
-const swiper2 = new Swiper('.popular-slider', {
-	navigation: {
-		nextEl: '.swiper-button-next2',
-		prevEl: '.swiper-button-prev2' // Включить стрелочки
-	},
-	modules: [Navigation, FreeMode], // Модули которые будут использоваться
-	autoHeight: true, // Автовысота
-	speed: 500, // Скорость прокрутки слайдера
-	slidesPerView: 2.5, // Количество слайдов которые будут видны,
-	spaceBetween: 42,
-	freeMode: true,
-	grabCursor: true
-});
 
-const swiper3 = new Swiper('.categories-slider', {
-	navigation: {
-		nextEl: '.swiper-button-next3',
-		prevEl: '.swiper-button-prev3' // Включить стрелочки
-	},
-	modules: [Navigation, FreeMode], // Модули которые будут использоваться
-	autoHeight: true, // Автовысота
-	speed: 500, // Скорость прокрутки слайдера
-	slidesPerView: 3, // Количество слайдов которые будут видны,
-	spaceBetween: 42,
-	freeMode: true,
-	grabCursor: true
-});
+const swiper2 = () => {
+	new Swiper('.popular-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next2',
+			prevEl: '.swiper-button-prev2' // Включить стрелочки
+		},
+		modules: [Navigation, FreeMode], // Модули которые будут использоваться
+		autoHeight: true, // Автовысота
+		speed: 500, // Скорость прокрутки слайдера
+		slidesPerView: 2.5, // Количество слайдов которые будут видны,
+		spaceBetween: 15,
+		freeMode: true,
+		grabCursor: true,
+		breakpoints: {
+			1300: {
+				spaceBetween: 42
+			},
+			1100: {
+				slidesPerView: 2.5
+			},
+			600: {
+				slidesPerView: 2
+			}
+		}
+	});
+}
+
+const swiper3 = () => {
+	new Swiper('.categories-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next3',
+			prevEl: '.swiper-button-prev3' // Включить стрелочки
+		},
+		modules: [Navigation, FreeMode], // Модули которые будут использоваться
+		autoHeight: true, // Автовысота
+		speed: 500, // Скорость прокрутки слайдера
+		slidesPerView: 3, // Количество слайдов которые будут видны,
+		spaceBetween: 15,
+			freeMode: true,
+			grabCursor: true,
+			breakpoints: {
+				1300: {
+					spaceBetween: 42
+				},
+				1100: {
+					slidesPerView: 3
+				},
+				600: {
+					slidesPerView: 2
+				}
+			}
+	});
+}
+
+function detectDevice() {
+	if (window.innerWidth < 600) {
+		for (let i = 0; i <= 2; i++) {
+			document.querySelectorAll('.auctions-slide')[i].style.display = 'block';
+			document.querySelectorAll('.popular-slide')[i].style.display = 'block';
+			document.querySelectorAll('.categories-slide')[i].style.display = 'block';
+		}
+	} else {
+		swiper();
+		swiper2();
+		swiper3();
+	}
+}
+
+detectDevice();
 
 AOS.init({
 	// Global settings:
@@ -67,8 +123,6 @@ AOS.init({
 	disableMutationObserver: false, // disables automatic mutations' detections (advanced)
 	debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
 	throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
 	// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
 	offset: 120, // offset (in px) from the original trigger point
 	delay: 0, // values from 0 to 3000, with step 50ms

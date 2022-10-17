@@ -26,6 +26,11 @@
 		/* or 148% */
 
 		letter-spacing: 0.02em;
+
+		@media(max-width: 1300px) {
+			font-size: 18px;
+			padding: 10px 25px;
+		}
 	}
 }
 
@@ -37,6 +42,23 @@
 .auctions__item {
 	background: #3D2942;
 	padding: 32px;
+
+	@media(max-width: 900px) {
+		padding: 20px 15px;
+	}
+}
+
+.auctions-slide {
+	@media(max-width: 600px) {
+		display: none;
+	}
+}
+
+.swiper-wrapper {
+	@media(max-width: 600px) {
+		flex-direction: column;
+		grid-gap: 45px 0;
+	}
 }
 
 .auctions-profile__guy {
@@ -50,6 +72,11 @@
 		margin-right: 16px;
 		width: 64px;
 		height: 64px;
+
+		@media(max-width: 800px) {
+			width: 40px;
+			height: 40px;
+		}
 	}
 }
 
@@ -61,6 +88,10 @@
 
 
 	color: #F5FBF2;
+
+	@media(max-width: 1300px) {
+		font-size: 20px;
+	}
 }
 
 .auctions-profile__nick {
@@ -80,7 +111,6 @@
 
 	img {
 		width: 25px;
-		transform: scale(4);
 	}
 
 	span {
@@ -91,6 +121,16 @@
 
 		color: #76607A;
 	}
+
+	@media(max-width: 700px) {
+		img {
+			width: 15px;
+		}
+
+		span {
+			font-size: 20px;
+		}
+	}
 }
 
 .auctions-bid__title {
@@ -100,6 +140,10 @@
 
 
 	color: #C6BFC8;
+
+	@media(max-width: 700px) {
+		font-size: 18px;
+	}
 }
 
 .auctions-bid__price {
@@ -107,6 +151,10 @@
 	font-size: 24px;
 	line-height: 35px;
 	font-family: 'Oxanium';
+
+	@media(max-width: 700px) {
+		font-size: 18px;
+	}
 }
 
 .auctions__profile {
@@ -158,6 +206,6 @@
 	transition: all .3s;
 
 	&:hover {
-	background: #FFCE4E;	
+		background: #FFCE4E;
 	}
 }

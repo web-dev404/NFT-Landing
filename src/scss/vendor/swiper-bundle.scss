@@ -227,9 +227,6 @@
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 
-  img {
-    transform: scale(5);
-  }
 
   @media($media_sm) {
     width: 15px;
@@ -267,7 +264,7 @@
   right: 100px;
 
   img {
-    transform: scale(5) rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 

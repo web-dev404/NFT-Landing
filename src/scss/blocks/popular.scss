@@ -11,10 +11,11 @@
 		font-weight: 500;
 		font-size: 32px;
 		line-height: 36px;
-		/* identical to box height, or 112% */
-
-
 		color: #F5FBF2;
+
+		@media(max-width: 900px) {
+			font-size: 17px;
+		}
 	}
 
 	.auctions-profile__likes {
@@ -48,6 +49,12 @@
 		filter: blur(8px);
 		-webkit-filter: blur(8px);
 		z-index: 2;
+	}
+
+	@media(max-width: 600px) {
+		&:after {
+			display: none;
+		}
 	}
 }
 

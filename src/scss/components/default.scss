@@ -63,6 +63,19 @@ button {
       background: $red;
     }
   }
+
+  @media(max-width: 800px) {
+    font-size: 34px;
+  }
+
+  @media(max-width: 600px) {
+    font-size: 30px;
+
+    &:after {
+      width: 84px;
+      height: 84px;
+    }
+  }
 }
 
 .title-wrapper {
@@ -74,4 +87,15 @@ button {
 .swiper {
   padding-top: 100px !important;
   overflow: visible !important;
+
+  @media(max-width: 600px) {
+   padding-top: 0 !important;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @media(max-width: 600px) {
+    display: none !important;
+  }
 }
