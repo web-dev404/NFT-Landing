@@ -1,6 +1,11 @@
 .popular {
 	margin-top: 170px;
 
+	background-image: url('../img/popular-effect.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 0 -50px;
+
 	.auctions__img {
 		img {
 			max-height: 270px;

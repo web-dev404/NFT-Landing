@@ -37,6 +37,11 @@
 .auctions {
 	overflow: hidden;
 	padding-bottom: 80px;
+	position: relative;
+
+	background-image: url('../img/auctions-effect.png');
+	background-repeat: no-repeat;
+	background-position: 0 -50px;
 }
 
 .auctions__item {
@@ -207,5 +212,11 @@
 
 	&:hover {
 		background: #FFCE4E;
+	}
+
+	@media(max-width: 500px) {
+		padding: 13px 58px;
+		margin: 48px auto 0;
+		font-size: 18px;
 	}
 }

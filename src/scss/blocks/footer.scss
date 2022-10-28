@@ -1,12 +1,24 @@
 .footer {
 	padding: 115px 0;
 	background: #251928;
+
+	@media(max-width: 600px) {
+		padding: 55px 0;
+	}
 }
 
 .footer__main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	grid-gap: 40px 20px;
+
+	@media(max-width: 1000px) {
+		flex-wrap: wrap;
+		img {
+			max-width: 100px;
+		}
+	}
 }
 
 .footer__social {
@@ -14,6 +26,10 @@
 	align-items: center;
 	grid-gap: 35px;
 	margin: 60px 0;
+
+	@media(max-width: 550px) {
+		margin: 20px 0;
+	}
 
 	a:hover {
 		path {

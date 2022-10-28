@@ -1,9 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   position: relative;
   color: $white2;
   @include font('Work Sans', 400);
   background: $black;
+
+  &.active {
+    overflow: hidden;
+  }
 }
 
 h1,
