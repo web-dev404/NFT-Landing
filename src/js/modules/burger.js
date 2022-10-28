@@ -12,11 +12,13 @@ burgerClose.addEventListener('click', (e) => {
 	toggleBurger();
 });
 
-headerLink.forEach(item => {
-	item.addEventListener('click', (e) => {
-		toggleBurger();
+if (window.innerWidth <= 700) {
+	headerLink.forEach(item => {
+		item.addEventListener('click', (e) => {
+			toggleBurger();
+		})
 	})
-})
+}
 
 function toggleBurger() {
 	burgerItem.classList.toggle('active');
