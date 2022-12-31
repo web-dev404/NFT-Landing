@@ -1,11 +1,34 @@
-# Верстка NFT Лендинга HTML, Sass/Scss, Js, Gulp.
-## Для работы нужен Node.js 14 версии либо выше и также установленный глобально Gulp.
 
-Node.js: https://nodejs.org/en/
-Команда для установки Gulp: npm install --global gulp-cli
+# NFT Landing HTML, SCSS, Js, Gulp
 
-## Дальше надо запустить команду: npm i
-## Чтобы запустить проект нужно прописать команду: npm run dev - Дальше открыть второй терминал и запустить команду: npm run svgSprive
+Modern NFT landing based on HTML, SCSS, Js and Gulp, the process of work was shown on YouTube
+## Screenshots
 
-Ссылка на мой ютуб канал: https://www.youtube.com/channel/UCQf1D997NUnPGBAHTSafBlA/videos
-Связаться со мной: https://t.me/imrondev
+![App Screenshot](https://i.ibb.co/1Zjh96Y/15.jpg)
+## The process of work
+
+Watch Process on Youtube: https://www.youtube.com/playlist?list=PLu0pRheOFLkEmnlzsKsEjapldwlXd18Ba
+## Installation
+
+Intsall & Run
+```bash
+  npm i
+  npm run dev
+```
+
+In parallel, open the second terminal and run this code:
+
+```bash
+  npm run svgSprive
+```
+## 🔗 Demo
+
+https://imron-portfolio.netlify.app/
+## 🚀 About Me
+I'm a Frontend Developer with 3 years of experience who is open to interesting offers!
+
+Contact on telegram: https://t.me/imrondev
+
+Contact on whatsapp: https://wa.me/998946053999
+
+Email me: imronbusy@gmail.com
